@@ -42,7 +42,7 @@ jobs:
       run: echo "Deploying to the Dev environment..."
 
   hml:
-    needs: build
+    needs: dev
     runs-on: ubuntu-latest
     environment:
       name: HML
