@@ -19,6 +19,18 @@ jobs:
 
     - name: Build
       run: echo "Building the application..."
+      
+    - name: Sonar
+      run: |
+        echo "Analisando the application..."
+        sleep 20
+        echo "Analisando the application..."
+        echo "Analisando the application..."
+        echo "Analisando the application..."
+        echo "Analisando the application..."
+        echo "Analisando the application..."
+        echo "Analisando the application..."
+        sleep 10
 
   dev:
     needs: build
