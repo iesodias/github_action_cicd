@@ -49,6 +49,26 @@ jobs:
     steps:
     - name: Deploy
       run: echo "Deploying to the HML environment..."
+      
+    - name: Teste de Carga
+      run: |
+        echo "Realizando teste de Carga..."
+        sleep 20
+        echo "10 the hits..."
+        echo "20 the hits..."
+        echo "30 the hits..."
+        echo "40 the hits..."
+        echo "50 the hits..."
+        echo "60 the hits..."
+        sleep 10
+        echo "70 the hits..."
+        echo "10 the hits..."
+        echo "10 the hits..."
+        sleep 10
+        echo "10 the hits..."
+        echo "10 the hits..."
+        echo "10 the hits..."
+        sleep 30
 
   prd:
     needs: [dev, hml]
@@ -56,5 +76,22 @@ jobs:
     environment:
       name: PRD
     steps:
-    - name: Deploy
-      run: echo "Deploying to the PRD environment..."
+    - name: Login Cluster
+      run: |
+        echo "Deploying to the PRD environment..."
+        sleep 10
+      
+    - name: Docker Login Variaveis
+      run: |
+        echo "Atualizando to the PRD environment..."
+        sleep 20
+        
+    - name: Helm Install
+      run: |
+        echo "Deploying to the PRD environment..."
+        sleep 30
+        
+    - name: Helm Upgrade
+      run: |
+        echo "Deploying to the PRD environment..."
+        sleep 60
